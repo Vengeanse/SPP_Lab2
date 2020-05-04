@@ -1,0 +1,16 @@
+{
+  "name": "SPP1 Extended",
+  "version": "1.0.0",
+  "description": "not available now",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nikolay Trofimov <kolya.trofimov.98@mail.ru>",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^4.0.3",
+    "multer": "^1.4.2"
+  }
+}
