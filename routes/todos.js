@@ -80,7 +80,7 @@ router.post('/refresh', async (req, res) => {
 
 router.post('/download', async (req, res) => {
 	if (fileCheck(req) == 200) {
-		res.download(req.body.file)
+		res.status(fileCheck(req)).download(req.body.file)
 	}
 	else {
 		res.status(fileCheck(req)).render('error', {
@@ -131,8 +131,11 @@ function fileCheck(req) {
 		if (fs.existsSync(req.body.file)) {
 	    	return '200'
 	  	}
+	  	else {
+	  		return '404'
+	  	}
 	} catch(err) {
-	  	return '404'
+	  	console.log(err)
 	}
 }
 
